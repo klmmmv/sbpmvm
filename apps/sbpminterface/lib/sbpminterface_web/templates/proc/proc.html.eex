@@ -1,0 +1,13 @@
+<table class=".table">
+  <th>Processes</th>
+  <%= for proc <- processes() do %>
+      <tr>
+        <td><a href="/proc/<%= proc[:id] %>">
+            <%= proc[:name] %>
+          </a>
+        </td>
+      </tr>
+    </a>
+  <% end %>
+</table>
+    

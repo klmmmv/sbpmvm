@@ -1,0 +1,9 @@
+<h3><%= proc_name(@id) %></h3>
+<table class=".table">
+  <tr>
+    <td>Current subject</td>
+  </tr>
+  <tr>
+    <td>Current state</td>
+  </tr>
+</table>
