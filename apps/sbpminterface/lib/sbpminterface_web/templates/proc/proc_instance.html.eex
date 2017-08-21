@@ -7,3 +7,5 @@
     <td>Current state</td>
   </tr>
 </table>
+
+<p> <%=  test() %> </p>

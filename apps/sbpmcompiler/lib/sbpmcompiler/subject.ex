@@ -1,4 +1,4 @@
-defmodule Subject do 
+defmodule SBPMVM.Subject do 
   @moduledoc """
   This resembles a S-BPM Subject.
 
@@ -10,6 +10,10 @@ defmodule Subject do
 
   def start_link(state) do
     GenServer.start_link(__MODULE__, state, name: __MODULE__)
+  end
+
+  def testfun do
+    "Hello from #{inspect(__MODULE__)}"
   end
 
   # Callbacks

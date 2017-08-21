@@ -9,7 +9,7 @@ defmodule SBPMVM.Mixfile do
       config_path: "../../config/config.exs",
       deps_path: "../../deps",
       lockfile: "../../mix.lock",
-      elixir: "~> 1.5",
+      elixir: "~> 1.4",
       start_permanent: Mix.env == :prod,
       deps: deps()
     ]
@@ -19,7 +19,7 @@ defmodule SBPMVM.Mixfile do
   def application do
     [
       extra_applications: [:logger],
-      mod: {SBPMVM.Application, []}
+      mod: {SBPMVM.App, []}
     ]
   end
 

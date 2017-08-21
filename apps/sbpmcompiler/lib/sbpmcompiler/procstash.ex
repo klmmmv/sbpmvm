@@ -9,7 +9,7 @@ defmodule ProcStash do
   ##############
 
   def start_link(init) do
-    GenServer.start_link(__MODULE__, [], name: __MODULE__) 
+    GenServer.start_link(__MODULE__, :ok, init) 
   end
 
   @doc "Update the state of a Subject"
@@ -33,5 +33,9 @@ defmodule ProcStash do
   def handle_call({:get, subject}, _from, state) do
     :not_implemented
     # {:reply, Map.get(state, subject), state}
+  end
+
+  def init(state) do
+    {:ok, state}
   end
 end

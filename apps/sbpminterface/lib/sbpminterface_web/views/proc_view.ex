@@ -18,6 +18,10 @@ defmodule SbpminterfaceWeb.ProcView do
 
   # Get Process info API
 
+  def test do
+    SBPMVM.Subject.testfun()
+  end
+
   def process_names do
     processes()
     |> Enum.each(fn proc -> proc[:name] end)
