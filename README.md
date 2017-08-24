@@ -5,7 +5,17 @@ This is a process virtual machine for S-BPM processes.
 The application is being implemented for my master thesis at the FH Joanneum
 Graz. For the master thesis please contact me at michaelvalentin.klammer@edu.fh-joanneum.at.
 
-## Instalation
+## Installation
+
+First you have to setup a postgres user and its role.
+
+~~~bash
+psql
+~~~
+
+~~~sql
+CREATE ROLE postgres WItH LOGIN CREATEDB PASSWORD 'postgres';
+~~~
 
 ~~~bash
 git clone https://github.com/klmmmv/sbpmvm.git
