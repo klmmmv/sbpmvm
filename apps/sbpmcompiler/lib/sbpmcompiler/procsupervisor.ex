@@ -9,12 +9,12 @@ defmodule SBPMSupervisor do
   use Supervisor
 
   def start_link(opts) do
-    Supervisor.start_link(__MODULE__, :ok, opts)
+    Supervisor.start_link(__MODULE__, opts, name: __MODULE__)
   end
 
-  def init(:ok) do
+  def init(u) do
     children = [
-      {ProcStash, name: Proc.Stash}
+      {SBPMVM.Subject, [:hello]}
     ]
     Supervisor.init(children, strategy: :one_for_one)
   end

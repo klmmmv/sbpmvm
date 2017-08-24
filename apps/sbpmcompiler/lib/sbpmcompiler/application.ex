@@ -4,11 +4,10 @@ defmodule SBPMVM.App do
   use Application
 
   def start(_type, _args) do
-    import Supervisor.Spec, warn: false
     children = [
-      worker(SBPMVM.Subject, [:first], name: Subj),
+      {SBPMSupervisor, [:test]},
     ]
-    opts = [strategy: :one_for_one, name: Runtime]
+    opts = [strategy: :one_for_one]
     Supervisor.start_link(children, opts)
   end
 end

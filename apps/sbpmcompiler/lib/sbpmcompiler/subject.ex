@@ -2,7 +2,7 @@ defmodule SBPMVM.Subject do
   @moduledoc """
   This resembles a S-BPM Subject.
 
-  A subject is a supervised worker. It represents a subject in S-BPM 
+  A subject is a supervised GenServer/GenFSM. It represents a subject in S-BPM 
   terminology.
   """
 
@@ -14,6 +14,10 @@ defmodule SBPMVM.Subject do
 
   def testfun do
     "Hello from #{inspect(__MODULE__)}"
+  end
+
+  def push(msg) do
+    GenServer.cast(__MODULE__, {:push, msg})
   end
 
   # Callbacks

@@ -1,11 +1,9 @@
 <h3><%= proc_name(@id) %></h3>
 <table class=".table">
   <tr>
-    <td>Current subject</td>
-  </tr>
+    <td>Current subject</td>  </tr>
   <tr>
-    <td>Current state</td>
+    <td>Current state</td><td><%= current_state(@id) %></td>
+
   </tr>
 </table>
-
-<p> <%=  test() %> </p>
